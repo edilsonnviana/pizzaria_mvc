@@ -1,0 +1,13 @@
+/* assets/css/style.css */
+body, html { height: 100%; }
+body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+
+.menu { display: none; }
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Ajustei o caminho da imagem para carregar direto da internet no teste */
+  background-image: url("https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1920&auto=format&fit=crop");
+  min-height: 90%;
+}
