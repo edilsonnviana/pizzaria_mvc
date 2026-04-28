@@ -1,5 +1,6 @@
 <?php 
 // 1. CHAMA O CABEÇALHO (HTML, CSS, NAVBAR, BANNER)
+// Aproveitei para corrigir os caracteres especiais nos comentários para UTF-8
 include_once 'views/includes/cabecalho.php'; 
 ?>
 
@@ -15,16 +16,26 @@ include_once 'views/includes/cabecalho.php';
     </div>
 
     <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 40,00</span></h1>
-      <p class="w3-text-grey">Mussarela, tomate e manjericão fresco</p>
-      <hr>
-   
-      <h1><b>Calabresa</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 45,00</span></h1>
-      <p class="w3-text-grey">Mussarela, calabresa fatiada e cebola</p>
-      <hr>
       
-      <h1><b>Frango com Catupiry</b> <span class="w3-tag w3-red w3-round">Mais Pedida!</span><span class="w3-right w3-tag w3-dark-grey w3-round">R$ 50,00</span></h1>
-      <p class="w3-text-grey">Mussarela, frango desfiado e catupiry original</p>
+      <?php 
+      // O PHP vai percorrer a variável $listaPizzas que o index.php enviou.
+      // Para cada pizza que ele achar no banco, ele repete o bloco HTML abaixo.
+      foreach ($listaPizzas as $pizza): 
+      ?>
+      
+          <h1>
+              <b><?php echo $pizza['sabor']; ?></b> 
+              <span class="w3-right w3-tag w3-dark-grey w3-round">
+                  R$ <?php echo number_format($pizza['preco'], 2, ',', '.'); ?>
+              </span>
+          </h1>
+          <p class="w3-text-grey"><?php echo $pizza['ingredientes']; ?></p>
+          <hr>
+      
+      <?php 
+      endforeach; // Fim do laço de repetição
+      ?>
+
     </div>
 
   </div>
