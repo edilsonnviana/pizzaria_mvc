@@ -18,6 +18,10 @@
     <a href="#menu" class="w3-bar-item w3-button">CARDÁPIO</a>
     <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
     <a href="#myMap" class="w3-bar-item w3-button">CONTATO</a>
+    <!-- Adicione este link junto com os outros itens do seu menu -->
+<a href="index.php?acao=login" class="w3-bar-item w3-button w3-hide-small w3-hover-red">
+    <i class="fa fa-lock"></i> Área Admin
+</a>
   </div>
 </div>
   

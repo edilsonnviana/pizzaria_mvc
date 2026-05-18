@@ -1,7 +1,8 @@
 <?php 
 // 1. CHAMA O CABEÇALHO (HTML, CSS, NAVBAR, BANNER)
 // Aproveitei para corrigir os caracteres especiais nos comentários para UTF-8
-include_once 'views/includes/cabecalho.php'; 
+include_once 'views/includes/cabecalho.php';
+include_once 'views/includes/mensagens.php'; 
 ?>
 
 <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
@@ -49,6 +50,7 @@ include_once 'views/includes/cabecalho.php';
 </div>
 
 <?php 
+
 // 2. CHAMA O RODAPÉ (MAPA, CONTATO, SCRIPT JS E FECHAMENTO DO HTML)
 include_once 'views/includes/rodape.php'; 
 ?>

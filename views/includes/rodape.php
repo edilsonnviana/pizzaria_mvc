@@ -8,8 +8,27 @@
     
     <form action="index.php?acao=salvar_pedido" method="POST">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Seu Nome" required name="cliente_nome"></p>
+      
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Endereço de Entrega" required name="endereco"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="ID da Pizza Escolhida" required name="pizza_id"></p>
+      
+      <p>
+        <select class="w3-select w3-padding-16 w3-border" name="pizza_id" required>
+          <option value="" disabled selected>Escolha o sabor da sua Pizza</option>
+          
+          <?php 
+          // O rodapé consegue "enxergar" a variável $listaPizzas que foi criada lá no index.php
+          if (isset($listaPizzas)) {
+              foreach ($listaPizzas as $pizza): 
+          ?>
+              <option value="<?= $pizza['id'] ?>">
+                  <?= $pizza['sabor'] ?> - R$ <?= number_format($pizza['preco'], 2, ',', '.') ?>
+              </option>
+          <?php 
+              endforeach; 
+          }
+          ?>
+        </select>
+      </p>
       <p><button class="w3-button w3-light-grey w3-block" type="submit">ENVIAR PEDIDO</button></p>
     </form>
   </div>
