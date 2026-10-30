@@ -71,29 +71,4 @@ Acesse o sistema pelo navegador: http://localhost/NOME_DA_PASTA/index.php.
 
 (Credenciais padrão de admin: Login admin | Senha senha123)
 
-2. Rodando os Robôs de Teste (Python)
-
-Para executar a suíte de testes de usabilidade, é necessário ter o Python 3 e o Chromium instalados na máquina.
-
-Acesse a pasta de testes pelo terminal:
-
-cd Testes_Software
-
-
-Crie e ative o ambiente virtual:
-
-python3 -m venv env_qa
-source env_qa/bin/activate
-
-
-Instale as dependências:
-
-pip install selenium
-
-
-Execute os scripts (exemplo de login):
-
-python3 teste_login.py
-
-
 Projeto desenvolvido para fins didáticos e laboratório prático de Engenharia de Software e Qualidade de Sistemas.
